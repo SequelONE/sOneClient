@@ -1,0 +1,5 @@
+Changelog for sOneClient.
+
+1.0.0-pl
+==============
+- Client version for sOneServer
