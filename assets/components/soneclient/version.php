@@ -42,13 +42,14 @@ $patch_level = $v['patch_level'];
 
 $full_version = $version.'.'.$major.'.'.$minor.'-'.$patch_level;
 
+$path = MODX_BASE_PATH;
+
 $modxversion = array();
 
 $modxversion = array(
     "site_modx_version" => $full_version,
-    "new_modx_version" => $new_version
+    "new_modx_version" => $new_version,
+    "path" => $path
 );
 
-if ($user->get('id') == $modx->user->get('id')) {
-    echo json_encode($modxversion, JSON_PRETTY_PRINT);
-}
+echo json_encode($modxversion, JSON_PRETTY_PRINT);
